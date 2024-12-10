@@ -6,24 +6,20 @@ import java.util.Random;
  */
 
 public class DataScene extends Scene {
-  
-    // Contains the car data
-  
+    
+  /**
+   * Contains the car data, variables for car speeds, and constants for the images.
+   */
+    
     private double[] autoSpeeds;
     private double[] manSpeeds;
     private String[] autoNames;
     private String[] manNames;
     private String[] textColors;
-
-    // Variables for car speeds
-  
     private double autoAverage;
     private double autoFastest;
     private double manAverage;
     private double manFastest;
-
-    // Constants for images
-  
     private static final String MAN_IMAGE = "manualcar.jpg";
     private static final String AUTO_IMAGE = "autocar.jpg";
 

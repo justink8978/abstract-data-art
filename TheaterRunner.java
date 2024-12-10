@@ -20,7 +20,9 @@ public class TheaterRunner {
 
         DataScene myDataScene = new DataScene(autoSpeedsArray, autoNamesArray, manSpeedsArray, manNamesArray, colorsArray);
 
-        // Chooses car type and index
+        /** 
+           * Chooses car type and index
+          */
       
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose a car type: 1 for Automatic, 2 for Manual");
@@ -28,7 +30,9 @@ public class TheaterRunner {
         System.out.println("Enter the index of the car (0 to " + (autoSpeedsArray.length - 1) + "):");
         int index = scanner.nextInt();
 
-        // Displays car details
+      /** 
+           * Displays the details of the car
+          */
       
         if (carType == 1) {
             myDataScene.showAutoCarDetails(index);
