@@ -138,6 +138,7 @@ public class DataScene extends Scene {
         setTextHeight(15);
         drawText(name, 20, 350);
         drawText("Top Speed: " + Math.round(speed), 20, 375);
+        playSound("vroom.wav");
         pause(2);
     }
 
