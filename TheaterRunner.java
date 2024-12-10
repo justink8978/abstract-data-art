@@ -4,20 +4,18 @@ import java.util.Scanner;
 public class TheaterRunner {
     public static void main(String[] args) {
       
-       /**
-         * Reads data from the txt file
-         * Such as the names and speeds
-        */
+  /**
+      * Reads data from the txt file to find things such as the cars' names and speeds
+    */
       
-        String[] autoNamesArray = FileReader.toStringArray("autoNames.txt");
-        String[] manNamesArray = FileReader.toStringArray("manNames.txt");
-        double[] autoSpeedsArray = FileReader.toDoubleArray("autoSpeeds.txt");
-        double[] manSpeedsArray = FileReader.toDoubleArray("manSpeeds.txt");
-        String[] colorsArray = { "white", "blue", "black", "red", "yellow" };
+     String[] autoNamesArray = FileReader.toStringArray("autoNames.txt");
+     String[] manNamesArray = FileReader.toStringArray("manNames.txt");
+     double[] autoSpeedsArray = FileReader.toDoubleArray("autoSpeeds.txt");
+     double[] manSpeedsArray = FileReader.toDoubleArray("manSpeeds.txt");
+     String[] colorsArray = { "white", "blue", "black", "red", "yellow" };
 
       /**
-         * Creates the DataScene object
-         * For the theatre
+         * Creates the DataScene object for the theatre
         */
 
         DataScene myDataScene = new DataScene(autoSpeedsArray, autoNamesArray, manSpeedsArray, manNamesArray, colorsArray);
@@ -31,6 +29,7 @@ public class TheaterRunner {
         int index = scanner.nextInt();
 
         // Displays car details
+      
         if (carType == 1) {
             myDataScene.showAutoCarDetails(index);
         } else if (carType == 2) {
@@ -42,7 +41,6 @@ public class TheaterRunner {
       /**
      * Creates and plays the scene
      */
-      
       
         myDataScene.createScene();
         Theater.playScenes(myDataScene);

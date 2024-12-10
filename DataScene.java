@@ -81,7 +81,7 @@ public class DataScene extends Scene {
   
     public void showAutoCarDetails(int index) {
         String message = getAutoMessage(index);
-        drawCarDetails("Automatic Car", message, autoNames[index], autoSpeeds[index], AUTO_IMAGE, "white");
+        drawCarDetails("Your Automatic Car Selection!", message, autoNames[index], autoSpeeds[index], AUTO_IMAGE, "white");
     }
 
     /**
@@ -90,7 +90,7 @@ public class DataScene extends Scene {
   
     public void showManCarDetails(int index) {
         String message = getManMessage(index);
-        drawCarDetails("Manual Car", message, manNames[index], manSpeeds[index], MAN_IMAGE, "white");
+        drawCarDetails("Your Manual Car Selection!", message, manNames[index], manSpeeds[index], MAN_IMAGE, "white");
     }
 
     /**
@@ -99,11 +99,11 @@ public class DataScene extends Scene {
   
     private String getAutoMessage(int index) {
         if (autoSpeeds[index] == autoFastest) {
-            return "Fastest Automatic Car";
+            return "The Fastest Automatic Car!";
         } else if (autoSpeeds[index] > autoAverage || autoSpeeds[index] > manFastest) {
-            return "Vroom Vroom";
+            return "Here is an automatic car";
         } else {
-            return "Skrrrrt";
+            return "This is an automatic car";
         }
     }
 
@@ -113,11 +113,11 @@ public class DataScene extends Scene {
   
     private String getManMessage(int index) {
         if (manSpeeds[index] == manFastest) {
-            return "Fastest Manual Car";
+            return "The Fastest Manual Car!";
         } else if (manSpeeds[index] > manAverage || manSpeeds[index] > autoFastest) {
-            return "Zooooooom";
+            return "Here is an manual car";
         } else {
-            return "Beep Beep";
+            return "This is an manual car";
         }
     }
 
@@ -128,16 +128,16 @@ public class DataScene extends Scene {
     private void drawCarDetails(String title, String message, String name, double speed, String image, String color) {
         drawImage(image, 0, 0, 450);
         setFillColor(color);
-        drawRectangle(0, 0, 410, 50);
-        drawRectangle(0, 300, 410, 110);
+        drawRectangle(-5, 0, 410, 100);
+        drawRectangle(-5, 300, 410, 110);
         setTextColor("black");
-        setTextHeight(34);
+        setTextHeight(20);
         drawText(title, 65, 40);
-        setTextHeight(25);
+        setTextHeight(15);
         drawText(message, 20, 325);
-        setTextHeight(18);
+        setTextHeight(15);
         drawText(name, 20, 350);
-        drawText("Speed: " + Math.round(speed), 20, 375);
+        drawText("Top Speed: " + Math.round(speed), 20, 375);
         pause(2);
     }
 
@@ -157,7 +157,7 @@ public class DataScene extends Scene {
      */
   
     public void createManScene(int index) {
-        drawCarDetails("Manual Car", getManMessage(index), manNames[index], manSpeeds[index], MAN_IMAGE, "white");
+        drawCarDetails("Your Manual Car Selection!", getManMessage(index), manNames[index], manSpeeds[index], MAN_IMAGE, "white");
     }
 
     /**
@@ -165,6 +165,6 @@ public class DataScene extends Scene {
      */
   
     public void createAutoScene(int index) {
-        drawCarDetails("Automatic Car", getAutoMessage(index), autoNames[index], autoSpeeds[index], AUTO_IMAGE, "white");
+        drawCarDetails("Your Automatic Car Selection!", getAutoMessage(index), autoNames[index], autoSpeeds[index], AUTO_IMAGE, "white");
     }
 }
