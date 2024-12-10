@@ -21,9 +21,6 @@ Use your knowledge of object-oriented programming, one-dimensional (1D) arrays, 
 
 Include a hyperlink to the source of your dataset used for this project. Additionally, provide a short description of each column used from the dataset, and the data type.
 
-Example:
-
-
 Dataset: https://www.kaggle.com/datasets/ahmedwaelnasef/cars-dataset
 
 autoNamesArray (String array) - Names of automatic cars.
@@ -54,4 +51,4 @@ Record a short video of your abstract art animation to display here on your READ
 https://www.youtube.com/shorts/IpwqIC97KXo
 ## Description
 
-My project is an app that makes a data visualization for people interested in looking at or buying new cars. It utilizes object-oriented programming, algorithms, and 1D arrays to compare automatic and manual cars. It traverses a dataset of car information which includes names, speeds, and it calculates the averages and top speed of each car type. As for the scanner class, the user utilizes it to select the car transmission type and which number car to pick. Some examples of the visualizations include images, colors, and text.
+My project is an app that makes a data visualization for people interested in looking at or buying new cars. It utilizes object-oriented programming, algorithms, and 1D arrays to compare automatic and manual cars. It traverses a dataset of car information which includes names, speeds, and it calculates the averages and top speed of each car type. As for the scanner class, the user utilizes it to select the car transmission type and which number car to pick. Some examples of the visualizations include images, colors, and text. I chose to make the project like this because I have an interest in cars and hope to get one soon.
